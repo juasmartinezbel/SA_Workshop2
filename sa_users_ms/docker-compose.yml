@@ -1,0 +1,19 @@
+version: '2'
+services:
+  sa_users_db:
+    image: mysql
+    ports:
+      - "3308:3308"
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_USER: arqsoft
+      MYSQL_PASSWORD: 123
+      MYSQL_DATABASE: users
+      MYSQL_HOST: sa_users_db
+  sa_users_ms:
+    build: .
+    command: bash -c "sleep 40 && rm -f tmp/pids/server.pid && bundle exec rails db:migrate && bundle exec rails s -p 3001 -b '0.0.0.0'"
+    ports: 
+      - "3001:3001"
+    depends_on:
+      - sa_users_db
