@@ -1,0 +1,139 @@
+{
+	"variables": [],
+	"info": {
+		"name": "AS_Workshop2_users",
+		"_postman_id": "15e35604-2ceb-4deb-2220-5d9fed6b8f1e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getUsers() with params",
+			"request": {
+				"url": {
+					"raw": "http://192.168.99.101:3001/users?maxResult=3&firstResult=1&=",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"99",
+						"101"
+					],
+					"port": "3001",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "maxResult",
+							"value": "3",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "firstResult",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "",
+							"value": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "createUser(Object)",
+			"request": {
+				"url": "http://192.168.99.101:3001/users",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\": \"Luisillo\",\n\t\"lastName\": \"EL chido\",\n\t\"email\": \"luisito@tumama.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getUsersById()",
+			"request": {
+				"url": "http://192.168.99.101:3001/users/10",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getUsers()",
+			"request": {
+				"url": "http://192.168.99.101:3001/users",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser(Object)",
+			"request": {
+				"url": "http://192.168.99.101:3001/users/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\": \"Luisillo el primero\",\n\t\"lastName\": \"EL chido\",\n\t\"email\": \"luisito@tumama.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUsers()",
+			"request": {
+				"url": "http://192.168.99.101:3001/users/5",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

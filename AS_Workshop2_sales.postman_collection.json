@@ -1,0 +1,129 @@
+{
+	"variables": [],
+	"info": {
+		"name": "AS_Workshop2_sales",
+		"_postman_id": "26ada0fa-7bf8-420c-f028-42e759f95047",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getSales() with params",
+			"request": {
+				"url": {
+					"raw": "http://192.168.99.101:3002/sales?maxResult=3&firstResult=1",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"99",
+						"101"
+					],
+					"port": "3002",
+					"path": [
+						"sales"
+					],
+					"query": [
+						{
+							"key": "maxResult",
+							"value": "3",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "firstResult",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "",
+							"value": "",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "createSale(Object)",
+			"request": {
+				"url": "http://192.168.99.101:3002/sales",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"product_id\": 1,\n\t\"user_id\": 1\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getSalesById()",
+			"request": {
+				"url": "http://192.168.99.101:3002/sales/5",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getSales()",
+			"request": {
+				"url": "http://192.168.99.101:3002/sales",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "updateSales(Object)",
+			"request": {
+				"url": "http://192.168.99.101:3002/sales/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"product_id\": 2,\n\t\"user_id\": 3000\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUsers() copy",
+			"request": {
+				"url": "http://192.168.99.101:3002/sales/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
