@@ -1,0 +1,31 @@
+{
+	"variables": [],
+	"info": {
+		"name": "AS_Workshop2_APIgateway",
+		"_postman_id": "e4443829-626f-f1aa-a448-6fb9824ff0c8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createBuy(product_id, user_id)",
+			"request": {
+				"url": "http://192.168.99.101:4000/buy",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"product_id\": 2,\n\t\"user_id\": 2\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
