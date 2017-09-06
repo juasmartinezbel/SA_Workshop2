@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { SaleService } from './sale.service';
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { SaleComponent } from './sale/sale.component';
 
@@ -10,9 +11,10 @@ import { SaleComponent } from './sale/sale.component';
     SaleComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [SaleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
