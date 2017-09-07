@@ -8,6 +8,6 @@
       <label for="product">Producto (id):</label>
       <input type="text" class="form-control" #product id="product" style="width: 15em">     
     </div>
-    <button type="submit" class="btn btn-success">Comprar</button>
+    <button (click)="buyProduct(user.value, product.value)" type="submit" class="btn btn-success">Comprar</button>
 	</form>	
 </div>
