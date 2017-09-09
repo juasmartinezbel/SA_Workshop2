@@ -57,6 +57,32 @@ class SalesController < ApplicationController
     end
   end
 
+  # GET /sales/user/1
+  def by_user
+    unless is_number?(params[:id])
+      render json: 
+      {
+        message: "Not Acceptable (Invalid Params)",
+        code: 406,
+        description: "Sale id must be of type: integer"
+      }, status: 406
+      return
+    end
+
+    history = Sale.where( :user_id => params[:id] )
+    if history.length > 0
+      render json: history
+    else
+      render json:
+      {
+        message: "Not Found",
+        code: 404,
+        description: "The user with id=#{params[:id]} has no purchases!"
+      }, status: 404
+      return
+    end
+  end
+
   # POST /sales
   def create
     #Obtiene una lista de todos los parametros enviados, ignorando los strong params

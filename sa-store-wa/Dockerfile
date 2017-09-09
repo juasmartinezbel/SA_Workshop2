@@ -1,4 +1,4 @@
-FROM node:6.11.2
+FROM node:6.11.3
 
 RUN useradd --user-group --create-home --shell /bin/false app
 
@@ -6,7 +6,7 @@ ENV HOME=/Store
 RUN mkdir $HOME
 WORKDIR $HOME
 
-RUN npm install -g @angular/cli@latest
+RUN npm install -g @angular/cli
 COPY package.json $HOME/package.json
 RUN npm install && npm cache clean
 COPY . /Store
@@ -14,4 +14,4 @@ COPY . /Store
 EXPOSE 4200
 EXPOSE 49152
 
-CMD ["npm", "start", "--host=0.0.0.0"]
+CMD ["ng", "serve", "--host=0.0.0.0"]
