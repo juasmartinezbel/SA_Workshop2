@@ -67,7 +67,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\": \"Product1\",\n\t\"description\": \"Excellent product\",\n\t\"price\": 99,\n\t\"stock\": 10\n}"
+					"raw": "{\n\t\"name\": \"Arequipe\",\n\t\"description\": \"Excellent product\",\n\t\"price\": 99,\n\t\"stock\": 0\n}"
 				},
 				"description": ""
 			},

@@ -124,6 +124,17 @@
 				"description": ""
 			},
 			"response": []
+		},
+		{
+			"name": "getSalesByUser",
+			"request": {
+				"url": "http://192.168.99.101:3002/sales/user/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }

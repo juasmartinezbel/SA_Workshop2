@@ -21,8 +21,19 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"product_id\": 2,\n\t\"user_id\": 2\n}"
+					"raw": "{\n\t\"product_id\": 2,\n\t\"user_id\": 4\n}"
 				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getShoppingHistory()",
+			"request": {
+				"url": "http://192.168.99.101:4000/history/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
 				"description": ""
 			},
 			"response": []
